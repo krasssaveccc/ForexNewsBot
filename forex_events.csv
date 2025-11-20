@@ -1,0 +1,23 @@
+time,currency,event,impact,actual,forecast,previous
+12:30am,AUD,MI Leading Index m/m,Low Impact Expected,0.1%,,0.0%
+12:50am,JPY,Core Machinery Orders m/m,Low Impact Expected,4.2%,2.2%,-0.9%
+1:30am,AUD,Wage Price Index q/q,High Impact Expected,0.8%,0.8%,0.8%
+1:55am,USD,FOMC Member Logan Speaks,Low Impact Expected,,,
+8:00am,GBP,CPI y/y,High Impact Expected,3.6%,3.5%,3.8%
+8:00am,GBP,Core CPI y/y,Low Impact Expected,3.4%,3.4%,3.5%
+8:00am,GBP,PPI Input m/m,Low Impact Expected,-0.3%,0.0%,-0.1%
+8:00am,GBP,PPI Output m/m,Low Impact Expected,0.0%,0.1%,0.0%
+8:00am,GBP,RPI y/y,Low Impact Expected,4.3%,4.3%,4.5%
+10:00am,EUR,Current Account,Low Impact Expected,23.1B,15.9B,11.9B
+10:30am,GBP,HPI y/y,Low Impact Expected,2.6%,3.0%,3.0%
+11:00am,EUR,Final Core CPI y/y,Low Impact Expected,2.4%,2.4%,2.4%
+11:00am,EUR,Final CPI y/y,Low Impact Expected,2.1%,2.1%,2.1%
+11:03am,GBP,10-y Bond Auction,Low Impact Expected,4.61|2.8,,4.52|3.3
+2:30pm,USD,Trade Balance,Low Impact Expected,-59.6B,-61.3B,-78.3B
+4:00pm,USD,FOMC Member Miran Speaks,Low Impact Expected,,,
+4:30pm,USD,Crude Oil Inventories,Low Impact Expected,-3.4M,-1.9M,6.4M
+6:00pm,USD,President Trump Speaks,Medium Impact Expected,,,
+6:30pm,CAD,Gov Council Member Vincent Speaks,Low Impact Expected,,,
+6:45pm,USD,FOMC Member Barkin Speaks,Low Impact Expected,,,
+8:00pm,USD,FOMC Meeting Minutes,High Impact Expected,,,
+8:00pm,USD,FOMC Member Williams Speaks,Low Impact Expected,,,

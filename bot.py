@@ -425,8 +425,6 @@ def run_flask():
 def main():
     """Основная функция запуска бота"""
     print("🚀 Запуск Forex News Bot...")
-    print("💡 Бот использует Selenium для парсинга")
-    print("🔔 Планировщик уведомлений запускается...")
     
     # Запускаем планировщик
     scheduler.start()
@@ -437,35 +435,11 @@ def main():
     
     try:
         bot.polling(none_stop=True, timeout=60)
-    except KeyboardInterrupt:
-        print("\n🛑 Остановка бота...")
+    except Exception as e:
+        print(f"❌ Ошибка бота: {e}")
     finally:
         scheduler.stop()
         cleanup_parser()
-        print("✅ Ресурсы очищены")
 
 if __name__ == "__main__":
-    print("🚀 Запуск Forex News Bot на Render...")
-    
-    # Простой веб-сервер для health checks
-    def health_server():
-        from http.server import HTTPServer, BaseHTTPRequestHandler
-        class HealthHandler(BaseHTTPRequestHandler):
-            def do_GET(self):
-                self.send_response(200)
-                self.end_headers()
-                self.wfile.write(b'OK')
-            def log_message(self, format, *args):
-                pass  # Отключаем логи
-        
-        server = HTTPServer(('0.0.0.0', 5000), HealthHandler)
-        print("🌐 Health check server running on port 5000")
-        server.serve_forever()
-    
-    # Запускаем веб-сервер в фоне
-    import threading
-    web_thread = threading.Thread(target=health_server, daemon=True)
-    web_thread.start()
-    
-    # Запускаем бота
     main()
