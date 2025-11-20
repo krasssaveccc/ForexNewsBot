@@ -386,6 +386,8 @@ def handle_other_messages(message):
     bot.reply_to(message, "🤔 Не понимаю ваше сообщение.\n\n👇 Используйте кнопки ниже:", 
                 reply_markup=create_main_keyboard())
 
+# ... весь ваш существующий код ДО этой строки ...
+
 if __name__ == "__main__":
     print("🚀 Запуск Forex News Bot...")
     print("💡 Бот использует Selenium для парсинга")
@@ -399,47 +401,10 @@ if __name__ == "__main__":
     atexit.register(scheduler.stop)
     
     try:
-        bot.polling()
+        bot.polling(none_stop=True, timeout=60)
     except KeyboardInterrupt:
         print("\n🛑 Остановка бота...")
     finally:
         scheduler.stop()
         cleanup_parser()
-        print("✅ Ресурсы очищены")# Добавьте это в конец bot.py
-from flask import Flask
-import threading
-
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return "Forex Telegram Bot is running!"
-
-@app.route('/health')
-def health():
-    return "OK"
-
-def run_flask():
-    app.run(host='0.0.0.0', port=5000, debug=False)
-
-def main():
-    """Основная функция запуска бота"""
-    print("🚀 Запуск Forex News Bot...")
-    
-    # Запускаем планировщик
-    scheduler.start()
-    
-    # Регистрируем очистку при выходе
-    atexit.register(cleanup_parser)
-    atexit.register(scheduler.stop)
-    
-    try:
-        bot.polling(none_stop=True, timeout=60)
-    except Exception as e:
-        print(f"❌ Ошибка бота: {e}")
-    finally:
-        scheduler.stop()
-        cleanup_parser()
-
-if __name__ == "__main__":
-    main()
+        print("✅ Ресурсы очищены")
