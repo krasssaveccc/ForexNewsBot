@@ -1,10 +1,11 @@
 # Forex News Bot Configuration
+import os
 
-# Telegram Bot
-BOT_TOKEN = "8549981793:AAE_2GSzJ1G3Pz0g6uhaGAK2JaqoBJ-IQmM"
+# Telegram Bot - токен ТОЛЬКО из переменных окружения
+BOT_TOKEN = os.getenv('BOT_TOKEN')  # ← ИЗМЕНИТЬ!
 
 # Timezone Settings
-DEFAULT_TIMEZONE = "America/New_York"
+DEFAULT_TIMEZONE = os.getenv('DEFAULT_TIMEZONE', 'Europe/Belgrade')  # ← ИЗМЕНИТЬ!
 
 # Parser Settings
 PARSER_TIMEOUT = 30

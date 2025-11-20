@@ -8,3 +8,5 @@ services:
     envVars:
       - key: BOT_TOKEN
         value: 8549981793:AAE_2GSzJ1G3Pz0g6uhaGAK2JaqoBJ-IQmM
+      - key: DEFAULT_TIMEZONE  # ← ТОЛЬКО ЭТА ПЕРЕМЕННАЯ
+        value: "Europe/Belgrade"
